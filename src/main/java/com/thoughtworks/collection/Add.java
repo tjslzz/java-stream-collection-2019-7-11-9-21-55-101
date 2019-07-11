@@ -10,7 +10,7 @@ public class Add {
         List<Integer> list = new ArrayList<>();
         if(leftBorder >= rightBorder)for(int i = rightBorder;i <= leftBorder ; i++){list.add(i); }
         else for(int i = leftBorder;i <= rightBorder ; i++){list.add(i); }
-        
+
         return list.stream().reduce(0,(pre,cur)->cur % 2 == 0 ? pre + cur : pre);
     }
 
@@ -19,7 +19,7 @@ public class Add {
     }
 
     public int getSumTripleAndAddTwo(List<Integer> arrayList) {
-        throw new NotImplementedException();
+        return arrayList.stream().mapToInt(item->item*3+2).sum();
     }
 
     public List<Integer> getTripleOfOddAndAddTwo(List<Integer> arrayList) {
